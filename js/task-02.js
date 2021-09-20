@@ -1,17 +1,21 @@
 const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
-];
+   'Картошка',
+   'Грибы',
+   'Чеснок',
+   'Помидоры',
+   'Зелень',
+   'Приправы',
+ ];
 
-const ingredientsRef = document.querySelector('#ingredients')
-const items = ingredients.reduce((acc, item) => acc + `<li>${item}</li>`, "")
+const ingredientsRef = document.querySelector("#ingredients")
 
-ingredientsRef.insertAdjacentHTML("beforeend", items)
-
+const itemElementsRef = ingredients.map(ingredient => {
+  const itemsRef = document.createElement("li")
+  itemsRef.textContent = ingredient
+  return itemsRef
+})
+console.log(itemElementsRef);
+ingredientsRef.append(...itemElementsRef)
 
 
 
