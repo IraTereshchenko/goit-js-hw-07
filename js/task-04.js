@@ -16,7 +16,6 @@ refs.increment.addEventListener("click", () => {
     let elem = Number.parseInt(refs.valueRef.textContent)
     elem -= 1
     refs.valueRef.textContent = elem
-    // console.log(refs.valueRef.textContent);
     console.log(elem);
 })
 
