@@ -14,7 +14,7 @@ const itemElementsRef = ingredients.map(ingredient => {
   itemsRef.textContent = ingredient
   return itemsRef
 })
-console.log(itemElementsRef);
+
 ingredientsRef.append(...itemElementsRef)
 
 
